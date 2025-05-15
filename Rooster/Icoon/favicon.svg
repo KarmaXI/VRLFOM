@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Achtergrond cirkel -->
+  <circle cx="32" cy="32" r="30" fill="#0284c7" />
+  
+  <!-- Kalender basis -->
+  <rect x="16" y="16" width="32" height="32" rx="4" fill="white" />
+  
+  <!-- Kalender bovenkant (rode balk) -->
+  <rect x="16" y="16" width="32" height="8" rx="4" ry="0" fill="#0ea5e9" />
+  
+  <!-- Kalender ophangpunten -->
+  <rect x="24" y="14" width="4" height="4" rx="1" fill="#0ea5e9" />
+  <rect x="36" y="14" width="4" height="4" rx="1" fill="#0ea5e9" />
+  
+  <!-- Kalender rasterlijnen -->
+  <line x1="27" y1="30" x2="27" y2="44" stroke="#e5e7eb" stroke-width="1" />
+  <line x1="37" y1="30" x2="37" y2="44" stroke="#e5e7eb" stroke-width="1" />
+  <line x1="16" y1="30" x2="48" y2="30" stroke="#e5e7eb" stroke-width="1" />
+  <line x1="16" y1="37" x2="48" y2="37" stroke="#e5e7eb" stroke-width="1" />
+  
+  <!-- Aanduiding voor verlof (kleine palmboompjes) -->
+  <path d="M24,33.5 c0,-3 -2,-4 -3,-4 c2,0 3,-2 3,-3 c0,2 1.5,3 3,3 c-2,0 -3,1.5 -3,4" fill="#10b981" />
+  <path d="M33,33.5 c0,-3 -2,-4 -3,-4 c2,0 3,-2 3,-3 c0,2 1.5,3 3,3 c-2,0 -3,1.5 -3,4" fill="#10b981" />
+  
+  <!-- Aanduiding voor goedgekeurd verlof (vinkje) -->
+  <path d="M38,33 l2,2 l4,-4" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  
+  <!-- Letter "V" van Verlof -->
+  <path d="M24,42 l3,5 l3,-5" stroke="#0ea5e9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  
+  <!-- Klokje voor compensatie-uren -->
+  <circle cx="38" cy="42" r="2.5" stroke="#f59e0b" stroke-width="1.5" fill="none" />
+  <line x1="38" y1="42" x2="38" y2="40" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round" />
+  <line x1="38" y1="42" x2="39.5" y2="42.5" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round" />
+</svg>

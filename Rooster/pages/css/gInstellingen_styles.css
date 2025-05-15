@@ -1,0 +1,162 @@
+/* Pages/css/gInstellingen_styles.css */
+
+/* Stijlen specifiek voor de gInstellingen.aspx pagina */
+
+/* --- Licht Thema Variabelen & Overrides (consistent met verlofrooster_styles.css) --- */
+body.light-theme {
+    --main-bg-color-inst: #f9fafb;                     /* Tailwind gray-50 */
+    --main-text-color-inst: #1f2937;                   /* Tailwind gray-800 */
+    --card-bg-color-inst: #ffffff;                     /* Tailwind white */
+    --card-border-color-inst: #e5e7eb;                 /* Tailwind gray-200 */
+    --input-bg-color-inst: #ffffff;                    /* Tailwind white */
+    --input-border-color-inst: #d1d5db;                /* Tailwind gray-300 */
+    --input-text-color-inst: #1f2937;                  /* Tailwind gray-800 */
+    --input-disabled-bg-color-inst: #f3f4f6;           /* Tailwind gray-100 */
+    --input-disabled-text-color-inst: #6b7280;         /* Tailwind gray-500 */
+    --button-primary-bg-color-inst: #2563eb;           /* Tailwind blue-600 */
+    --button-primary-hover-bg-color-inst: #1d4ed8;     /* Tailwind blue-700 */
+    --link-color-inst: #2563eb;                        /* Tailwind blue-600 */
+    --link-hover-color-inst: #1d4ed8;                  /* Tailwind blue-700 */
+    --separator-color-inst: #e5e7eb;                   /* Tailwind gray-200 */
+    --tab-active-bg-color-inst: #f3f4f6;               /* Tailwind gray-100 */
+    --tab-active-border-color-inst: #2563eb;           /* Tailwind blue-600 */
+    --tab-active-text-color-inst: #2563eb;             /* Tailwind blue-600 */
+    --tab-inactive-text-color-inst: #6b7280;           /* Tailwind gray-500 */
+    --tab-hover-text-color-inst: #3b82f6;              /* Tailwind blue-500 */
+    --scrollbar-track-bg-inst: #e5e7eb;                /* Tailwind gray-200 */
+    --scrollbar-thumb-bg-inst: #9ca3af;                /* Tailwind gray-400 */
+    --scrollbar-thumb-hover-bg-inst: #6b7280;          /* Tailwind gray-500 */
+}
+
+body.light-theme {
+    background-color: var(--main-bg-color-inst) !important;
+    color: var(--main-text-color-inst) !important;
+}
+
+/* Header en algemene tekst in licht thema */
+body.light-theme h1,
+body.light-theme h2,
+body.light-theme h3,
+body.light-theme #app-container > header p {
+    color: var(--main-text-color-inst) !important;
+}
+
+/* Tab navigatie in licht thema */
+body.light-theme .border-gray-600 { /* Border onder tabs */
+    border-color: var(--separator-color-inst) !important;
+}
+body.light-theme .tab-button {
+    color: var(--tab-inactive-text-color-inst) !important;
+}
+body.light-theme .tab-button:hover {
+    color: var(--tab-hover-text-color-inst) !important;
+}
+body.light-theme .tab-button.active {
+    background-color: var(--tab-active-bg-color-inst) !important;
+    border-color: var(--tab-active-border-color-inst) !important;
+    color: var(--tab-active-text-color-inst) !important;
+}
+
+/* Formulier achtergronden en borders in licht thema */
+body.light-theme #persoonlijke-gegevens-form,
+body.light-theme #rooster-instellingen-form {
+    background-color: var(--card-bg-color-inst) !important;
+    border: 1px solid var(--card-border-color-inst) !important;
+}
+
+/* Labels en paragraaftekst binnen formulieren in licht thema */
+body.light-theme form label,
+body.light-theme form p,
+body.light-theme form ul li {
+    color: var(--main-text-color-inst) !important;
+}
+body.light-theme form .text-gray-400 { /* Subtiele helper tekst */
+    color: #6b7280 !important; /* gray-500 */
+}
+body.light-theme form .text-gray-500 { /* Nog subtielere tekst */
+    color: #9ca3af !important; /* gray-400 */
+}
+
+
+/* Input velden, selects in licht thema */
+body.light-theme input[type="text"],
+body.light-theme input[type="email"],
+body.light-theme select {
+    background-color: var(--input-bg-color-inst) !important;
+    color: var(--input-text-color-inst) !important;
+    border-color: var(--input-border-color-inst) !important;
+}
+/* Disabled input velden in licht thema */
+body.light-theme input:disabled,
+body.light-theme input[readonly] {
+    background-color: var(--input-disabled-bg-color-inst) !important;
+    color: var(--input-disabled-text-color-inst) !important;
+    cursor: not-allowed !important;
+}
+/* Checkboxen in licht thema (Tailwind regelt dit meestal goed, maar voor de zekerheid) */
+body.light-theme input[type="checkbox"] {
+    background-color: var(--input-bg-color-inst) !important; /* Achtergrond van het vierkantje zelf */
+    border-color: var(--input-border-color-inst) !important;
+}
+body.light-theme input[type="checkbox"]:checked {
+    background-color: var(--button-primary-bg-color-inst) !important; /* Kleur van het vinkje/achtergrond als checked */
+    border-color: var(--button-primary-bg-color-inst) !important;
+}
+
+
+/* Knoppen in licht thema */
+body.light-theme #opslaan-instellingen-button {
+    background-color: var(--button-primary-bg-color-inst) !important;
+    color: white !important; /* Tekst op primaire knop is meestal wit */
+}
+body.light-theme #opslaan-instellingen-button:hover {
+    background-color: var(--button-primary-hover-bg-color-inst) !important;
+}
+
+/* Statusbericht in licht thema */
+body.light-theme #instellingen-status-bericht.bg-blue-600 { /* Info */
+    background-color: #eff6ff !important; /* blue-50 */
+    color: #1e40af !important; /* blue-800 */
+    border: 1px solid #bfdbfe !important; /* blue-200 */
+}
+body.light-theme #instellingen-status-bericht.bg-green-600 { /* Success */
+    background-color: #f0fdf4 !important; /* green-50 */
+    color: #166534 !important; /* green-800 */
+    border: 1px solid #bbf7d0 !important; /* green-200 */
+}
+body.light-theme #instellingen-status-bericht.bg-red-600 { /* Error */
+    background-color: #fef2f2 !important; /* red-50 */
+    color: #991b1b !important; /* red-800 */
+    border: 1px solid #fecaca !important; /* red-200 */
+}
+
+
+/* Footer in licht thema */
+body.light-theme footer {
+    border-color: var(--separator-color-inst) !important;
+}
+body.light-theme footer a {
+    color: var(--link-color-inst) !important;
+}
+body.light-theme footer a:hover {
+    color: var(--link-hover-color-inst) !important;
+}
+body.light-theme footer p.text-gray-500 {
+    color: #6b7280 !important; /* gray-500 */
+}
+
+/* Scrollbar voor licht thema */
+body.light-theme ::-webkit-scrollbar-track {
+    background: var(--scrollbar-track-bg-inst) !important;
+}
+body.light-theme ::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb-bg-inst) !important;
+}
+body.light-theme ::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover-bg-inst) !important;
+}
+
+/* Zorg dat de .hidden class van Tailwind werkt zoals verwacht */
+.hidden {
+    display: none !important;
+}

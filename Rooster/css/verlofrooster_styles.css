@@ -1,0 +1,1458 @@
+/* verlofrooster_styles.css - Enhanced Version */
+
+:root {
+  /* Enhanced Color Palette - Light Theme */
+  --primary-light: #1a56db;      /* More professional blue */
+  --primary-dark: #1e429f;       /* Darker blue for hover states */
+  --primary-focus: #3b82f6;      /* Focus state color */
+  --success-light: #059669;      /* Richer green */
+  --success-dark: #047857;       /* Darker green for hover */
+  --warning-light: #d97706;      /* Deeper amber */
+  --warning-dark: #b45309;       /* Darker amber for hover */
+  --danger-light: #dc2626;       /* More vibrant red */
+  --danger-dark: #b91c1c;        /* Darker red for hover */
+  
+  /* Team Header Colors - Enhanced contrast */
+  --team-purple: rgba(109, 40, 217, 0.95);     /* Improved Violet-700 */
+  --team-blue: rgba(29, 78, 216, 0.95);        /* Improved Blue-700 */
+  --team-orange: rgba(194, 65, 12, 0.95);      /* Improved Orange-700 */
+  --team-green: rgba(4, 120, 87, 0.95);        /* Improved Emerald-700 */
+  --team-red: rgba(185, 28, 28, 0.95);         /* Improved Red-700 */
+  
+  /* Cell Status Colors - More professional */
+  --cell-blue: rgba(37, 99, 235, 0.92);       /* Blue-600 status */
+  --cell-orange: rgba(217, 119, 6, 0.92);     /* Amber-600 status */
+  --cell-green: rgba(5, 150, 105, 0.92);      /* Emerald-600 status */
+  --cell-red: rgba(220, 38, 38, 0.92);        /* Red-600 status */
+  
+  /* Improved Neutrals */
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+  --true-dark: #0f172a;        /* Deep blue-black */
+  
+  /* Main Container Colors */
+  --app-bg-light: var(--gray-50);
+  --app-bg-dark: var(--true-dark);
+  --content-bg-light: var(--gray-50);
+  --content-bg-dark: var(--true-dark);
+  
+  /* Header Container Colors */
+  --header-bg-light: white;
+  --header-bg-dark: rgba(15, 23, 42, 0.98);
+  
+  /* Roster Grid Colors */
+  --grid-bg-light: var(--gray-200);
+  --grid-bg-dark: #1e293b;
+  --grid-cell-bg-light: rgba(255, 255, 255, 0.98);
+  --grid-cell-bg-dark: rgba(30, 41, 59, 0.98);
+  --weekend-cell-bg-light: rgba(243, 244, 246, 0.8);
+  --weekend-cell-bg-dark: rgba(15, 23, 42, 0.8);
+  
+  /* Typography */
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  
+  /* Border Variables */
+  --border-radius-sm: 0.25rem;
+  --border-radius: 0.375rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 0.75rem;
+  
+  /* Enhanced Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  /* Refined Transitions */
+  --transition-fast: 150ms;
+  --transition-normal: 250ms;
+  --transition-slow: 350ms;
+  --transition-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Grid Variables */
+  --grid-line-color-light: rgba(229, 231, 235, 0.7);
+  --grid-line-color-dark: rgba(31, 41, 55, 0.7);
+  --grid-cell-height: 48px;
+  
+  /* Spacing */
+  --content-padding-x: 1rem;
+  --content-padding-y: 1rem;
+
+  /* Added for selected row styling */
+  --selected-row-bg-light: rgba(37, 99, 235, 0.15);
+  --selected-row-text-light: #1d4ed8;
+  
+  /* Focus ring */
+  --focus-ring-color: rgba(59, 130, 246, 0.5);
+  --focus-ring-width: 2px;
+}
+
+/* Dark Theme Variables */
+.dark-theme {
+  --primary-light: #3b82f6;
+  --primary-dark: #2563eb;
+  --primary-focus: #60a5fa;
+  --success-light: #10b981;
+  --success-dark: #059669;
+  --warning-light: #f59e0b;
+  --warning-dark: #d97706;
+  --danger-light: #ef4444;
+  --danger-dark: #dc2626;
+  
+  /* Cell Status Colors - Enhanced for dark theme */
+  --cell-blue: rgba(59, 130, 246, 0.92);
+  --cell-orange: rgba(251, 146, 60, 0.92);
+  --cell-green: rgba(34, 197, 94, 0.92);
+  
+  /* Team Header Colors - Brighter for dark theme */
+  --team-purple: rgba(139, 92, 246, 0.95);
+  --team-blue: rgba(59, 130, 246, 0.95);
+  --team-orange: rgba(249, 115, 22, 0.95);
+  --team-green: rgba(16, 185, 129, 0.95);
+  --team-red: rgba(239, 68, 68, 0.95);
+  
+  --grid-line-color: var(--grid-line-color-dark);
+  
+  /* Richer shadows for dark theme */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.6);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.7), 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.7), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.7), 0 4px 6px -2px rgba(0, 0, 0, 0.4);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.7), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+
+  /* Added for selected row styling */
+  --selected-row-bg-dark: rgba(59, 130, 246, 0.25);
+  --selected-row-text-dark: #f3f4f6;
+  
+  /* Focus ring for dark theme */
+  --focus-ring-color: rgba(96, 165, 250, 0.6);
+}
+
+.light-theme {
+  --grid-line-color: var(--grid-line-color-light);
+}
+
+/* Global Styles */
+body {
+  font-family: var(--font-main);
+  transition: background-color var(--transition-normal) ease-in-out, 
+              color var(--transition-normal) ease-in-out;
+  margin: 0;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: var(--focus-ring-width) solid var(--focus-ring-color);
+  outline-offset: 2px;
+}
+
+/* App Container */
+#app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  transition: background-color var(--transition-normal) ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Light/Dark Theme Base Styles */
+.light-theme {
+  background-color: var(--app-bg-light);
+  color: var(--gray-800);
+}
+
+.dark-theme {
+  background-color: var(--app-bg-dark);
+  color: var(--gray-100);
+}
+
+/* Header Styling - Enhanced */
+#app-header {
+  box-shadow: var(--shadow-md);
+  border-bottom: 1px solid transparent;
+  transition: all var(--transition-normal) ease;
+  padding: 0.75rem 1rem;
+  position: relative;
+  z-index: 30;
+}
+
+.light-theme #app-header {
+  background-color: var(--header-bg-light);
+  border-bottom-color: var(--gray-200);
+}
+
+.dark-theme #app-header {
+  background-color: var(--header-bg-dark);
+  border-bottom-color: rgba(55, 65, 81, 0.7);
+}
+
+/* App Title - Improved */
+#app-title {
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  font-size: 1.25rem;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(90deg, var(--primary-dark), var(--primary-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+/* Refined accent to app title */
+#app-title::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 40%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary-dark), var(--primary-light));
+  transition: width var(--transition-normal) var(--transition-ease);
+  opacity: 0.8;
+}
+
+#app-title:hover::after {
+  width: 100%;
+}
+
+/* Enhanced Header Buttons */
+#app-header button {
+  transition: all var(--transition-fast) var(--transition-ease);
+  border-radius: var(--border-radius);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Improve buttons with subtle hover effect */
+#app-header button:not(.bg-blue-500):hover {
+  background-color: rgba(209, 213, 219, 0.15);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+/* Add subtle ripple effect to header buttons */
+#app-header button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%, -50%);
+  transform-origin: 50% 50%;
+}
+
+#app-header button:active::after {
+  opacity: 0.3;
+  animation: ripple 1s cubic-bezier(0, 0, 0.2, 1);
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(100, 100);
+    opacity: 0;
+  }
+}
+
+/* Notification Placeholder */
+#notification-placeholder {
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--border-radius);
+  animation: fadeIn var(--transition-normal) ease-in-out;
+  font-weight: 500;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Navigation buttons - Enhanced */
+.nav-button, .nav-button-alt {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast) var(--transition-ease);
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-button:hover, .nav-button-alt:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+.nav-button:active, .nav-button-alt:active {
+  transform: translateY(1px);
+  box-shadow: none;
+}
+
+/* Add subtle pulsing effect to today button */
+#today-button {
+  position: relative;
+}
+
+#today-button::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  bottom: -4px;
+  left: -4px;
+  border-radius: var(--border-radius-lg);
+  background-color: var(--primary-light);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity var(--transition-normal) ease;
+}
+
+#today-button:hover::before {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  opacity: 0.1;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.1; }
+  50% { opacity: 0.2; }
+}
+
+/* View Toggle Group - Refined */
+.view-toggle-group {
+  overflow: hidden;
+  transition: background-color var(--transition-normal) ease;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-inner);
+}
+
+.light-theme .view-toggle-group {
+  background-color: var(--gray-200);
+}
+
+.dark-theme .view-toggle-group {
+  background-color: rgba(55, 65, 81, 0.7);
+}
+
+.view-toggle-button {
+  font-weight: 500;
+  transition: all var(--transition-fast) var(--transition-ease);
+  padding: 0.4rem 0.75rem;
+  position: relative;
+  z-index: 1;
+  backface-visibility: hidden;
+}
+
+.light-theme .view-toggle-button {
+  color: var(--gray-600);
+}
+
+.dark-theme .view-toggle-button {
+  color: var(--gray-300);
+}
+
+/* Improved active view toggle button */
+.view-toggle-button.bg-blue-500 {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  font-weight: 600;
+  position: relative;
+}
+
+.view-toggle-button.bg-blue-500::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.7);
+  z-index: 2;
+}
+
+/* Filter Inputs - Enhanced */
+.filter-input {
+  transition: all var(--transition-fast) var(--transition-ease);
+  border-radius: var(--border-radius);
+}
+
+.light-theme .filter-input {
+  background-color: white;
+  border-color: var(--gray-300);
+  color: var(--gray-800);
+}
+
+.dark-theme .filter-input {
+  background-color: rgba(55, 65, 81, 0.5);
+  border-color: rgba(75, 85, 99, 0.7);
+  color: var(--gray-100);
+}
+
+.filter-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--focus-ring-color);
+}
+
+.light-theme .filter-input:focus {
+  border-color: var(--primary-dark);
+}
+
+.dark-theme .filter-input:focus {
+  border-color: var(--primary-light);
+}
+
+/* Improve search input with subtle icon */
+#rooster-search-input {
+  padding-left: 2.25rem;
+}
+
+/* Add subtle animation to search icon */
+#rooster-search-input + div svg {
+  transition: transform var(--transition-normal) var(--transition-ease);
+}
+
+#rooster-search-input:focus + div svg {
+  transform: scale(1.1);
+  color: var(--primary-light);
+}
+
+/* Main Content Area - Enhanced */
+#app-main {
+  flex-grow: 1;
+  padding: var(--content-padding-y) var(--content-padding-x);
+  transition: all var(--transition-normal) ease;
+  position: relative;
+  overflow: auto;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+}
+
+.light-theme #app-main {
+  background-color: var(--content-bg-light);
+  color: var(--gray-800);
+}
+
+.dark-theme #app-main {
+  background-color: var(--content-bg-dark);
+  color: var(--gray-100);
+}
+
+/* Responsive padding for app-main */
+@media (min-width: 768px) {
+  #app-main {
+    padding: 1.5rem;
+  }
+}
+
+/* Legenda Section - Refined */
+#legenda-section {
+  transition: all var(--transition-normal) ease;
+  border-radius: var(--border-radius-lg);
+  padding: 0.75rem 1rem;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.light-theme #legenda-section {
+  background-color: white;
+  border-color: var(--gray-200);
+}
+
+.dark-theme #legenda-section {
+  background-color: rgba(31, 41, 55, 0.7);
+  border: 1px solid rgba(55, 65, 81, 0.7);
+}
+
+/* Subtle gradient overlay on legenda */
+#legenda-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-light), var(--success-light), var(--warning-light));
+  opacity: 0.6;
+  z-index: 1;
+}
+
+#legenda-title {
+  font-weight: 600;
+  margin-right: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+#legenda-items-container {
+  transition: color var(--transition-normal) ease;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+  position: relative;
+  z-index: 2;
+}
+
+.light-theme #legenda-items-container {
+  color: var(--gray-700);
+}
+
+.dark-theme #legenda-items-container {
+  color: var(--gray-300);
+}
+
+/* Enhanced animation to legend items */
+#legenda-items-container > span {
+  transition: transform var(--transition-fast) var(--transition-ease), 
+              box-shadow var(--transition-fast) var(--transition-ease),
+              background-color var(--transition-fast) var(--transition-ease);
+  padding: 3px 6px;
+  border-radius: var(--border-radius-sm);
+  position: relative;
+}
+
+#legenda-items-container > span:hover {
+  transform: translateY(-1px);
+  background-color: rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-sm);
+}
+
+.dark-theme #legenda-items-container > span:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Legend color blocks */
+#legenda-items-container span > span:first-child {
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition-fast) var(--transition-ease);
+}
+
+#legenda-items-container span:hover > span:first-child {
+  transform: scale(1.2);
+}
+
+/* Alerts and Messages */
+#registratie-melding {
+  animation: slideDown var(--transition-normal) ease-in-out;
+  box-shadow: var(--shadow-lg);
+  border-radius: var(--border-radius-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Add animation to icon in alert */
+#registratie-melding svg {
+  animation: wiggle 2s cubic-bezier(0.36, 0.07, 0.19, 0.97) infinite;
+  transform-origin: center;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0); }
+  15%, 25% { transform: rotate(-10deg); }
+  35%, 45% { transform: rotate(7deg); }
+  55%, 65% { transform: rotate(-5deg); }
+  75%, 85% { transform: rotate(3deg); }
+}
+
+/* Rooster Grid Container - Enhanced */
+#rooster-grid-container {
+  box-shadow: var(--shadow-xl);
+  transition: all var(--transition-normal) ease;
+  overflow: hidden;
+  border-radius: var(--border-radius-lg);
+  border: 1px solid transparent;
+  position: relative;
+}
+
+.light-theme #rooster-grid-container {
+  background-color: var(--grid-bg-light);
+  border-color: var(--gray-300);
+}
+
+.dark-theme #rooster-grid-container {
+  background-color: var(--grid-bg-dark);
+  border-color: rgba(55, 65, 81, 0.7);
+}
+
+/* Rooster Headers - Enhanced with backdrop blur */
+#rooster-grid-header {
+  transition: all var(--transition-normal) ease;
+  z-index: 20;
+  position: relative;
+}
+
+.light-theme #rooster-grid-header {
+  background-color: rgba(209, 213, 219, 0.85);
+  backdrop-filter: blur(8px);
+}
+
+.dark-theme #rooster-grid-header {
+  background-color: rgba(31, 41, 55, 0.85);
+  backdrop-filter: blur(8px);
+}
+
+.rooster-header-medewerker, .rooster-header-dag {
+  font-weight: 600;
+  transition: all var(--transition-normal) ease;
+  padding: 0.75rem 0.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.rooster-header-medewerker {
+  text-align: left;
+  border-radius: var(--border-radius-sm) 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.light-theme .rooster-header-medewerker {
+  background-color: white;
+  color: var(--gray-800);
+  border-right: 1px solid var(--gray-200);
+}
+
+.dark-theme .rooster-header-medewerker {
+  background-color: rgba(31, 41, 55, 0.9);
+  color: var(--gray-100);
+  border-right: 1px solid rgba(55, 65, 81, 0.7);
+}
+
+.light-theme .rooster-header-dag {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: var(--gray-800);
+  border-right: 1px solid var(--gray-200);
+}
+
+.dark-theme .rooster-header-dag {
+  background-color: rgba(31, 41, 55, 0.9);
+  color: var(--gray-200);
+  border-right: 1px solid rgba(55, 65, 81, 0.7);
+}
+
+/* Today Highlighting - Enhanced */
+.dag-header-vandaag {
+  font-weight: 700;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3), var(--shadow-sm);
+}
+
+.light-theme .dag-header-vandaag {
+  background-color: var(--primary-light) !important;
+  color: white !important;
+}
+
+.dark-theme .dag-header-vandaag {
+  background-color: var(--primary-dark) !important;
+  color: white !important;
+}
+
+.dag-header-vandaag::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.7), rgba(255,255,255,0.3));
+  opacity: 0.8;
+}
+
+/* Rooster data rows container */
+#rooster-data-rows {
+  background-color: transparent;
+  position: relative;
+  z-index: 5;
+}
+
+/* Team Header Row - Enhanced with gradient */
+.team-header-rij {
+  font-weight: 600;
+  transition: all var(--transition-normal) ease;
+  padding: 0.7rem 1rem;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+/* Add subtle accent line and gradient to team headers */
+.team-header-rij::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 4px;
+  background-color: currentColor;
+  opacity: 0.9;
+}
+
+.team-header-rij::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 40%);
+  pointer-events: none;
+}
+
+/* Specific team header colors */
+.team-header-rij:nth-of-type(1),
+.team-header-rij:nth-of-type(6n+1) {
+  background-color: var(--team-purple);
+}
+
+.team-header-rij:nth-of-type(2),
+.team-header-rij:nth-of-type(6n+2) {
+  background-color: var(--team-blue);
+}
+
+.team-header-rij:nth-of-type(3),
+.team-header-rij:nth-of-type(6n+3) {
+  background-color: var(--team-orange);
+}
+
+.team-header-rij:nth-of-type(4),
+.team-header-rij:nth-of-type(6n+4) {
+  background-color: var(--team-green);
+}
+
+.team-header-rij:nth-of-type(5),
+.team-header-rij:nth-of-type(6n+5) {
+  background-color: var(--team-red);
+}
+
+/* Employee Row - Enhanced with hover effect */
+.medewerker-rij {
+  transition: background-color var(--transition-fast) var(--transition-ease),
+              box-shadow var(--transition-fast) var(--transition-ease);
+  position: relative;
+  z-index: 5;
+}
+
+.light-theme .medewerker-rij:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+  box-shadow: inset 0 0 0 1px rgba(59, 130, 246, 0.1);
+}
+
+.dark-theme .medewerker-rij:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 0 0 1px rgba(96, 165, 250, 0.1);
+}
+
+/* Improve alternating row styling for better readability */
+.medewerker-rij:nth-child(even) .rooster-cel:not([style*="background-color"]) {
+  opacity: 0.97;
+}
+
+/* Medewerker Name Cell - Enhanced */
+.rooster-cel-medewerker {
+  transition: all var(--transition-normal) var(--transition-ease);
+  padding: 0.75rem 0.5rem;
+  min-width: 200px;
+  z-index: 10;
+  position: relative;
+}
+
+.light-theme .rooster-cel-medewerker {
+  background-color: rgba(255, 255, 255, 0.97);
+  color: var(--gray-800);
+  border-right: 1px solid var(--gray-200);
+  box-shadow: 2px 0 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme .rooster-cel-medewerker {
+  background-color: rgba(31, 41, 55, 0.98);
+  color: var(--gray-100);
+  border-right: 1px solid rgba(55, 65, 81, 0.7);
+  box-shadow: 2px 0 4px -2px rgba(0, 0, 0, 0.3);
+}
+
+.rooster-cel-medewerker::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to right, rgba(0,0,0,0.03), rgba(0,0,0,0));
+  opacity: 0.5;
+}
+
+/* Improved profile images with subtle border */
+.rooster-cel-medewerker img {
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transition: all var(--transition-normal) ease-in-out;
+  object-fit: cover;
+}
+
+.light-theme .rooster-cel-medewerker img {
+  border-color: var(--gray-200);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme .rooster-cel-medewerker img {
+  border-color: rgba(55, 65, 81, 0.7);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.rooster-cel-medewerker:hover img {
+  transform: scale(1.1);
+  border-color: var(--primary-light);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Improved medewerker name and function styling */
+.rooster-cel-medewerker .flex-col span:first-child {
+  font-weight: 600;
+  transition: color var(--transition-fast) var(--transition-ease);
+}
+
+.rooster-cel-medewerker:hover .flex-col span:first-child {
+  color: var(--primary-light);
+}
+
+.rooster-cel-medewerker .flex-col span:last-child {
+  font-size: 0.75rem;
+  opacity: 0.9;
+  transition: opacity var(--transition-fast) var(--transition-ease);
+}
+
+.rooster-cel-medewerker:hover .flex-col span:last-child {
+  opacity: 1;
+}
+
+/* Roster Cells - Enhanced */
+.rooster-cel {
+  position: relative;
+  transition: all var(--transition-fast) var(--transition-ease);
+  min-width: 40px;
+  min-height: var(--grid-cell-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid transparent;
+  z-index: 1;
+}
+
+.light-theme .rooster-cel {
+  background-color: var(--grid-cell-bg-light);
+  border-right-color: var(--grid-line-color-light);
+  border-bottom-color: var(--grid-line-color-light);
+}
+
+.dark-theme .rooster-cel {
+  background-color: var(--grid-cell-bg-dark);
+  border-right-color: var(--grid-line-color-dark);
+  border-bottom-color: var(--grid-line-color-dark);
+}
+
+.rooster-cel:hover {
+  z-index: 5;
+  box-shadow: inset 0 0 0 1px rgba(59, 130, 246, 0.3);
+}
+
+/* Weekend Styling - Enhanced */
+.rooster-cel-weekend {
+  position: relative;
+}
+
+.light-theme .rooster-cel-weekend {
+  background-color: var(--weekend-cell-bg-light) !important;
+}
+
+.dark-theme .rooster-cel-weekend {
+  background-color: var(--weekend-cell-bg-dark) !important;
+}
+
+/* Add subtle pattern to weekend cells */
+.rooster-cel-weekend::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(0,0,0,0.02) 5px, rgba(0,0,0,0.02) 10px);
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* Today Cell Styling - Enhanced */
+.rooster-cel-vandaag {
+  position: relative;
+  z-index: 5;
+}
+
+.light-theme .rooster-cel-vandaag {
+  box-shadow: inset 0 0 0 2px var(--primary-light);
+}
+
+.dark-theme .rooster-cel-vandaag {
+  box-shadow: inset 0 0 0 2px var(--primary-dark);
+}
+
+.rooster-cel-vandaag::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 8px 8px 0;
+  z-index: 6;
+}
+
+.light-theme .rooster-cel-vandaag::after {
+  border-color: transparent var(--primary-light) transparent transparent;
+}
+
+.dark-theme .rooster-cel-vandaag::after {
+  border-color: transparent var(--primary-dark) transparent transparent;
+}
+
+/* Status Cell Styling - Blue, Orange, Green cells */
+.rooster-cel[style*="background-color: rgb(59, 130, 246)"],
+.rooster-cel[style*="background-color: #3b82f6"] {
+  background-color: var(--cell-blue) !important;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+.rooster-cel[style*="background-color: rgb(249, 115, 22)"],
+.rooster-cel[style*="background-color: #f59e0b"],
+.rooster-cel[style*="background-color: rgb(245, 158, 11)"] {
+  background-color: var(--cell-orange) !important;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+.rooster-cel[style*="background-color: rgb(16, 185, 129)"],
+.rooster-cel[style*="background-color: #10b981"] {
+  background-color: var(--cell-green) !important;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+/* Add subtle shine effect to status cells */
+.rooster-cel[style*="background-color"]::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.2), rgba(255,255,255,0));
+  opacity: 0.7;
+  pointer-events: none;
+  border-radius: 2px 2px 0 0;
+}
+
+/* Cell Tag Styling - Enhanced with "belt" */
+.rooster-cel-tag {
+  position: relative;
+  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 22px;
+  border-radius: var(--border-radius-sm);
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  padding: 0 5px;
+  transition: transform var(--transition-fast) ease-in-out, 
+              box-shadow var(--transition-fast) var(--transition-ease);
+  color: white !important;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.02em;
+}
+
+.rooster-cel:hover .rooster-cel-tag {
+  transform: scale(1.15);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Styling for selected row --- */
+.selected-row {
+  position: relative;
+  z-index: 6 !important;
+}
+
+.selected-row > .rooster-cel,
+.selected-row > .rooster-cel-medewerker {
+    transition: background-color var(--transition-fast) var(--transition-ease), 
+                color var(--transition-fast) var(--transition-ease),
+                box-shadow var(--transition-fast) var(--transition-ease);
+    position: relative;
+}
+
+.light-theme .selected-row > .rooster-cel,
+.light-theme .selected-row > .rooster-cel-medewerker {
+    background-color: var(--selected-row-bg-light) !important;
+    color: var(--selected-row-text-light) !important;
+    box-shadow: inset 0 0 0 1px rgba(37, 99, 235, 0.3);
+}
+
+.dark-theme .selected-row > .rooster-cel,
+.dark-theme .selected-row > .rooster-cel-medewerker {
+    background-color: var(--selected-row-bg-dark) !important;
+    color: var(--selected-row-text-dark) !important;
+    box-shadow: inset 0 0 0 1px rgba(59, 130, 246, 0.3);
+}
+
+/* Add subtle highlight indicator to selected row */
+.selected-row::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: var(--primary-light);
+  z-index: 20;
+}
+
+/* Ensure text color within specific elements in the selected medewerker cell also updates */
+.light-theme .selected-row > .rooster-cel-medewerker span,
+.light-theme .selected-row > .rooster-cel-medewerker div {
+     color: var(--selected-row-text-light) !important;
+     transition: color var(--transition-fast) var(--transition-ease);
+}
+
+.dark-theme .selected-row > .rooster-cel-medewerker span,
+.dark-theme .selected-row > .rooster-cel-medewerker div {
+     color: var(--selected-row-text-dark) !important;
+     transition: color var(--transition-fast) var(--transition-ease);
+}
+
+/* Floating Action Button (FAB) - Enhanced */
+#fab-add-button {
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-normal) ease-in-out;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 40;
+}
+
+#fab-add-button:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-xl);
+}
+
+#fab-add-button:active {
+  transform: scale(0.95);
+}
+
+/* Add ripple effect to FAB */
+#fab-add-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.3s;
+}
+
+#fab-add-button:active::after {
+  transform: scale(2);
+  opacity: 0;
+  transition: 0s;
+}
+
+#fab-menu {
+  box-shadow: var(--shadow-xl);
+  transition: opacity var(--transition-normal) var(--transition-ease),
+              transform var(--transition-normal) ease-in-out,
+              pointer-events 0s linear var(--transition-normal);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  z-index: 35;
+}
+
+#fab-menu.pointer-events-none {
+  transition: opacity var(--transition-normal) var(--transition-ease),
+              transform var(--transition-normal) var(--transition-ease),
+              pointer-events 0s linear var(--transition-normal);
+}
+
+.light-theme #fab-menu {
+  background-color: white;
+  border: 1px solid var(--gray-200);
+}
+
+.dark-theme #fab-menu {
+  background-color: var(--gray-800);
+  border: 1px solid var(--gray-700);
+}
+
+.fab-menu-item {
+  transition: all var(--transition-fast) var(--transition-ease);
+  border-left: 3px solid transparent;
+  padding: 0.75rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.light-theme .fab-menu-item {
+  color: var(--gray-700);
+}
+
+.dark-theme .fab-menu-item {
+  color: var(--gray-200);
+}
+
+.light-theme .fab-menu-item:hover {
+  background-color: var(--gray-100);
+  border-left-color: var(--primary-light);
+  color: var(--primary-dark);
+}
+
+.dark-theme .fab-menu-item:hover {
+  background-color: var(--gray-700);
+  border-left-color: var(--primary-light);
+  color: var(--primary-light);
+}
+
+/* Add ripple effect to FAB menu items */
+.fab-menu-item::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(59, 130, 246, 0.3);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%, -50%);
+  transform-origin: 50% 50%;
+}
+
+.fab-menu-item:active::after {
+  opacity: 1;
+  animation: ripple 1s cubic-bezier(0, 0, 0.2, 1);
+}
+
+/* Modal Styling - Enhanced with blur and animations */
+#modal-placeholder {
+  backdrop-filter: blur(10px);
+  transition: opacity var(--transition-normal) var(--transition-ease);
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 50;
+}
+
+.modal-card {
+  max-height: 90vh;
+  overflow-y: auto;
+  transition: all var(--transition-normal) ease-in-out;
+  border-radius: var(--border-radius-lg);
+  width: 100%;
+  max-width: 500px;
+  box-shadow: var(--shadow-xl), 0 0 20px rgba(59, 130, 246, 0.1);
+}
+
+.light-theme .modal-card {
+  background-color: white;
+  color: var(--gray-800);
+  border: 1px solid var(--gray-200);
+}
+
+.dark-theme .modal-card {
+  background-color: var(--gray-800);
+  color: var(--gray-100);
+  border: 1px solid var(--gray-700);
+}
+
+#modal-title {
+  letter-spacing: -0.025em;
+  font-weight: 600;
+  font-size: 1.25rem;
+  position: relative;
+}
+
+/* Add subtle accent line under modal title */
+#modal-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary-light), transparent);
+  opacity: 0.7;
+}
+
+.dark-theme #current-month-year, #prev-month-button, #next-month-button {
+  color: var(--gray-100);
+}
+.dark-theme #prev-month-button {
+	color: var(--gray-100);
+}
+
+
+.dark-theme #prev-month-button {
+	color: var(--gray-100);
+}
+
+.modal-form-input {
+  width: 100%;
+  transition: all var(--transition-fast) var(--transition-ease);
+  outline: none;
+  border-radius: var(--border-radius);
+  padding: 0.75rem;
+.dark-theme #prev-month-button {
+	color: var(--gray-100);
+}
+
+}
+
+.dark-theme #prev-month-button {
+	color: var(--gray-100);
+}
+
+.light-theme .modal-form-input {
+  background-color: white;
+  border: 1px solid var(--gray-300);
+  color: var(--gray-800);
+}
+
+.dark-theme .modal-form-input {
+  background-color: var(--gray-700);
+  border: 1px solid var(--gray-600);
+.dark-theme #prev-month-button {
+	color: var(--gray-100);
+}
+
+  color: var(--gray-100);
+}
+
+.modal-form-input:focus {
+  box-shadow: 0 0 0 2px var(--focus-ring-color);
+}
+
+.light-theme .modal-form-input:focus {
+  border-color: var(--primary-dark);
+}
+
+.dark-theme .modal-form-input:focus {
+  border-color: var(--primary-light);
+}
+
+/* Modal Buttons - Enhanced with animations */
+.modal-button-primary, .modal-button-secondary {
+  font-weight: 500;
+  transition: all var(--transition-fast) var(--transition-ease);
+  border-radius: var(--border-radius);
+  padding: 0.625rem 1.25rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.modal-button-primary:hover, .modal-button-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.modal-button-primary:active, .modal-button-secondary:active {
+  transform: translateY(1px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Footer Text */
+#footer-text {
+  opacity: 0.7;
+  transition: opacity var(--transition-normal) var(--transition-ease);
+  font-size: 0.75rem;
+  text-align: center;
+  margin-top: 1rem;
+  padding: 0.5rem;
+}
+
+#footer-text:hover {
+  opacity: 1;
+}
+
+/* Enhanced Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 8px;
+}
+
+.light-theme ::-webkit-scrollbar-track {
+  background: rgba(243, 244, 246, 0.7);
+}
+
+.dark-theme ::-webkit-scrollbar-track {
+  background: rgba(31, 41, 55, 0.7);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+  transition: background-color var(--transition-normal) var(--transition-ease);
+}
+
+.light-theme ::-webkit-scrollbar-thumb {
+  background-color: rgba(156, 163, 175, 0.8);
+}
+
+.dark-theme ::-webkit-scrollbar-thumb {
+  background-color: rgba(75, 85, 99, 0.8);
+}
+
+.light-theme ::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(107, 114, 128, 0.9);
+}
+
+.dark-theme ::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(107, 114, 128, 0.9);
+}
+
+/* VVD, VVM Tags - Specific styling for vacation tags */
+.rooster-cel-tag:contains("VVD") {
+  background-color: var(--cell-blue);
+  box-shadow: 0 1px 3px rgba(37, 99, 235, 0.3);
+}
+
+.rooster-cel-tag:contains("VVM") {
+  background-color: var(--cell-orange);
+  box-shadow: 0 1px 3px rgba(217, 119, 6, 0.3);
+}
+
+/* Enhanced Verlof tag appearance */
+.rooster-cel-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 0 6px;
+  border-radius: 3px;
+  min-height: 18px;
+}
+
+/* Team header improvements */
+.team-header-rij {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.04em;
+}
+
+/* Enhanced tooltip for VVD/VVM hover */
+[title] {
+  position: relative;
+}
+
+[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+/* Today's date highlight in header */
+.rooster-header-dag.dag-header-vandaag {
+  animation: pulse-today 2s infinite;
+}
+
+@keyframes pulse-today {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.4); }
+  50% { box-shadow: 0 0 0 5px rgba(37, 99, 235, 0); }
+}
+
+/* Print styles */
+@media print {
+  #app-header, #legenda-section, #fab-add-button, #fab-menu {
+    display: none !important;
+  }
+  
+  #rooster-grid-container {
+    box-shadow: none;
+    border: 1px solid var(--gray-300);
+  }
+  
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+  
+  .rooster-cel, .rooster-header-dag, .rooster-header-medewerker, .rooster-cel-medewerker {
+    background-color: white !important;
+    color: black !important;
+    border-color: var(--gray-300) !important;
+  }
+  
+  /* Ensure colors from the roster are preserved for printing */
+  [style*="background-color"] {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}

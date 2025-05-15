@@ -1,0 +1,218 @@
+/* Pages/css/beheerCentrum_styles.css */
+
+/* Stijlen specifiek voor de beheerCentrum.aspx pagina */
+
+/* --- Licht Thema Variabelen & Overrides (consistent met andere subpagina's) --- */
+body.light-theme {
+    --main-bg-color-beheer: #f9fafb;                     /* Tailwind gray-50 */
+    --main-text-color-beheer: #1f2937;                   /* Tailwind gray-800 */
+    --card-bg-color-beheer: #ffffff;                     /* Tailwind white */
+    --card-border-color-beheer: #e5e7eb;                 /* Tailwind gray-200 */
+    --table-header-bg-beheer: #f3f4f6;                 /* Tailwind gray-100 */
+    --table-row-border-beheer: #e5e7eb;                /* Tailwind gray-200 */
+    --input-bg-color-beheer: #ffffff;                    /* Tailwind white */
+    --input-border-color-beheer: #d1d5db;                /* Tailwind gray-300 */
+    --input-text-color-beheer: #1f2937;                  /* Tailwind gray-800 */
+    --button-primary-bg-color-beheer: #2563eb;           /* Tailwind blue-600 */
+    --button-primary-hover-bg-color-beheer: #1d4ed8;     /* Tailwind blue-700 */
+    --button-secondary-bg-color-beheer: #e5e7eb;         /* Tailwind gray-200 */
+    --button-secondary-hover-bg-color-beheer: #d1d5db;   /* Tailwind gray-300 */
+    --button-secondary-text-color-beheer: #374151;       /* Tailwind gray-700 */
+    --button-danger-bg-color-beheer: #dc2626;            /* Tailwind red-600 */
+    --button-danger-hover-bg-color-beheer: #b91c1c;      /* Tailwind red-700 */
+    --button-success-bg-color-beheer: #16a34a;           /* Tailwind green-600 */
+    --button-success-hover-bg-color-beheer: #15803d;     /* Tailwind green-700 */
+    --link-color-beheer: #2563eb;                        /* Tailwind blue-600 */
+    --link-hover-color-beheer: #1d4ed8;                  /* Tailwind blue-700 */
+    --separator-color-beheer: #e5e7eb;                   /* Tailwind gray-200 */
+    --tab-active-bg-color-beheer: #f3f4f6;               /* Tailwind gray-100 */
+    --tab-active-border-color-beheer: #2563eb;           /* Tailwind blue-600 */
+    --tab-active-text-color-beheer: #2563eb;             /* Tailwind blue-600 */
+    --tab-inactive-text-color-beheer: #6b7280;           /* Tailwind gray-500 */
+    --tab-hover-text-color-beheer: #3b82f6;              /* Tailwind blue-500 */
+    --scrollbar-track-bg-beheer: #e5e7eb;                /* Tailwind gray-200 */
+    --scrollbar-thumb-bg-beheer: #9ca3af;                /* Tailwind gray-400 */
+    --scrollbar-thumb-hover-bg-beheer: #6b7280;          /* Tailwind gray-500 */
+    --modal-bg-beheer: #ffffff;                          /* Tailwind white */
+}
+
+body.light-theme {
+    background-color: var(--main-bg-color-beheer) !important;
+    color: var(--main-text-color-beheer) !important;
+}
+
+/* Header en algemene tekst in licht thema */
+body.light-theme h1,
+body.light-theme h2,
+body.light-theme #app-container > header p {
+    color: var(--main-text-color-beheer) !important;
+}
+
+/* Tab navigatie in licht thema */
+body.light-theme .border-gray-600 { /* Border onder tabs */
+    border-color: var(--separator-color-beheer) !important;
+}
+body.light-theme .tab-button {
+    color: var(--tab-inactive-text-color-beheer) !important;
+}
+body.light-theme .tab-button:hover {
+    color: var(--tab-hover-text-color-beheer) !important;
+}
+body.light-theme .tab-button.active {
+    background-color: var(--tab-active-bg-color-beheer) !important;
+    border-color: var(--tab-active-border-color-beheer) !important;
+    color: var(--tab-active-text-color-beheer) !important;
+}
+
+/* Kaart-achtige containers voor elke tab-inhoud in licht thema */
+body.light-theme .tab-content > div.bg-gray-700 {
+    background-color: var(--card-bg-color-beheer) !important;
+    border: 1px solid var(--card-border-color-beheer) !important;
+}
+
+/* Tabellen in licht thema */
+body.light-theme .editable-table thead.bg-gray-600 {
+    background-color: var(--table-header-bg-beheer) !important;
+}
+body.light-theme .editable-table thead th {
+    color: var(--main-text-color-beheer) !important;
+}
+body.light-theme .editable-table tbody.divide-gray-600 {
+    divide-color: var(--table-row-border-beheer) !important;
+}
+body.light-theme .editable-table td {
+    border-color: var(--table-row-border-beheer) !important; /* Voor de border-bottom-width */
+    color: var(--main-text-color-beheer) !important;
+}
+
+/* Input velden binnen tabellen in licht thema */
+body.light-theme .editable-table input[type="text"],
+body.light-theme .editable-table input[type="color"],
+body.light-theme .editable-table input[type="checkbox"],
+body.light-theme .editable-table select {
+    background-color: var(--input-bg-color-beheer) !important;
+    color: var(--input-text-color-beheer) !important;
+    border: 1px solid var(--input-border-color-beheer) !important;
+}
+body.light-theme .editable-table input[type="checkbox"]:checked {
+    background-color: var(--button-primary-bg-color-beheer) !important;
+    border-color: var(--button-primary-bg-color-beheer) !important;
+}
+body.light-theme .editable-table input[type="color"] {
+    border-width: 1px; /* Zorg dat color picker een border heeft */
+}
+
+
+/* Knoppen in licht thema */
+body.light-theme .bg-green-500 { /* Nieuw item knop */
+    background-color: var(--button-success-bg-color-beheer) !important;
+    color: white !important;
+}
+body.light-theme .bg-green-500:hover {
+    background-color: var(--button-success-hover-bg-color-beheer) !important;
+}
+body.light-theme .save-button, /* Opslaan knop in tabel/modal */
+body.light-theme #beheer-modal-save-button {
+    background-color: var(--button-primary-bg-color-beheer) !important;
+    color: white !important;
+}
+body.light-theme .save-button:hover,
+body.light-theme #beheer-modal-save-button:hover {
+    background-color: var(--button-primary-hover-bg-color-beheer) !important;
+}
+body.light-theme .delete-button { /* Verwijder knop in tabel */
+    background-color: var(--button-danger-bg-color-beheer) !important;
+    color: white !important;
+}
+body.light-theme .delete-button:hover {
+    background-color: var(--button-danger-hover-bg-color-beheer) !important;
+}
+body.light-theme #beheer-modal-cancel-button { /* Annuleren knop in modal */
+    background-color: var(--button-secondary-bg-color-beheer) !important;
+    color: var(--button-secondary-text-color-beheer) !important;
+}
+body.light-theme #beheer-modal-cancel-button:hover {
+    background-color: var(--button-secondary-hover-bg-color-beheer) !important;
+}
+
+
+/* Statusberichten in licht thema (algemeen en per sectie) */
+body.light-theme #beheer-status-bericht-algemeen.bg-blue-600,
+body.light-theme .tab-content .text-sm.bg-blue-600 { /* Info */
+    background-color: #eff6ff !important; /* blue-50 */
+    color: #1e40af !important; /* blue-800 */
+    border: 1px solid #bfdbfe !important; /* blue-200 */
+}
+body.light-theme #beheer-status-bericht-algemeen.bg-green-600,
+body.light-theme .tab-content .text-sm.bg-green-600 { /* Success */
+    background-color: #f0fdf4 !important; /* green-50 */
+    color: #166534 !important; /* green-800 */
+    border: 1px solid #bbf7d0 !important; /* green-200 */
+}
+body.light-theme #beheer-status-bericht-algemeen.bg-red-600,
+body.light-theme .tab-content .text-sm.bg-red-600 { /* Error */
+    background-color: #fef2f2 !important; /* red-50 */
+    color: #991b1b !important; /* red-800 */
+    border: 1px solid #fecaca !important; /* red-200 */
+}
+
+
+/* Modal in licht thema */
+body.light-theme #beheer-modal > div { /* De modal zelf */
+    background-color: var(--modal-bg-beheer) !important;
+}
+body.light-theme #beheer-modal #beheer-modal-title,
+body.light-theme #beheer-modal #beheer-modal-form label {
+    color: var(--main-text-color-beheer) !important;
+}
+body.light-theme #beheer-modal #beheer-modal-close-x {
+    color: var(--tab-inactive-text-color-beheer) !important;
+}
+body.light-theme #beheer-modal #beheer-modal-close-x:hover {
+    color: var(--main-text-color-beheer) !important;
+}
+/* Inputs in modal in licht thema (gebruiken dezelfde als tabel inputs) */
+body.light-theme #beheer-modal #beheer-modal-form input,
+body.light-theme #beheer-modal #beheer-modal-form select,
+body.light-theme #beheer-modal #beheer-modal-form textarea {
+    background-color: var(--input-bg-color-beheer) !important;
+    color: var(--input-text-color-beheer) !important;
+    border: 1px solid var(--input-border-color-beheer) !important;
+}
+
+
+/* Footer in licht thema */
+body.light-theme footer {
+    border-color: var(--separator-color-beheer) !important;
+}
+body.light-theme footer a {
+    color: var(--link-color-beheer) !important;
+}
+body.light-theme footer a:hover {
+    color: var(--link-hover-color-beheer) !important;
+}
+body.light-theme footer p.text-gray-500 {
+    color: #6b7280 !important; /* gray-500 */
+}
+
+/* Scrollbar voor licht thema */
+body.light-theme ::-webkit-scrollbar-track {
+    background: var(--scrollbar-track-bg-beheer) !important;
+}
+body.light-theme ::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb-bg-beheer) !important;
+}
+body.light-theme ::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover-bg-beheer) !important;
+}
+
+/* Zorg dat de .hidden class van Tailwind werkt zoals verwacht */
+.hidden {
+    display: none !important;
+}
+
+/* Specifieke aanpassingen voor de color picker input */
+.editable-table input[type="color"] {
+    min-height: 2.5rem; /* Zorg voor voldoende hoogte */
+    padding: 0.25rem; /* Kleinere padding voor de color picker zelf */
+}
